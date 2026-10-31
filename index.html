@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consumo de API - Usuarios</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="encabezado">
+    <div>
+      <p class="etiqueta">JSONPLACEHOLDER API</p>
+      <h1>Directorio de usuarios</h1>
+      <p class="subtitulo">Selecciona una tarjeta para consultar la información del usuario.</p>
+    </div>
+    <span class="contador" id="contador">Cargando...</span>
+  </header>
+
+  <main class="contenedor">
+    <p id="mensaje" class="mensaje">Cargando usuarios...</p>
+    <section id="listaUsuarios" class="grid-usuarios" aria-label="Lista de usuarios"></section>
+  </main>
+
+  <div id="modal" class="modal oculto" role="dialog" aria-modal="true" aria-labelledby="modalNombre">
+    <div class="modal-contenido">
+      <button id="cerrarModal" class="cerrar" aria-label="Cerrar ventana">&times;</button>
+      <p class="etiqueta">DETALLES DEL USUARIO</p>
+      <h2 id="modalNombre">Nombre del usuario</h2>
+      <div class="detalles">
+        <div class="detalle"><span>ID</span><strong id="datoId"></strong></div>
+        <div class="detalle"><span>Nombre</span><strong id="datoNombre"></strong></div>
+        <div class="detalle"><span>Username</span><strong id="datoUsername"></strong></div>
+        <div class="detalle"><span>Email</span><strong id="datoEmail"></strong></div>
+        <div class="detalle"><span>Phone</span><strong id="datoPhone"></strong></div>
+        <div class="detalle"><span>Website</span><strong id="datoWebsite"></strong></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
